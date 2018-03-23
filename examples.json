@@ -1,0 +1,28 @@
+[
+  {
+    "comment": "array of numbers",
+    "value": [
+      1,
+      2
+    ]
+  },
+  {
+    "comment": "array of mixed values",
+    "value": [
+      1,
+      2,
+      true,
+      false,
+      "x",
+      "y",
+      null
+    ]
+  },
+  {
+    "comment": "object with string properties",
+    "value": {
+      "x": "a",
+      "y": "b"
+    }
+  }
+]

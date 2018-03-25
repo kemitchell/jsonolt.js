@@ -35,9 +35,9 @@ assert.deepEqual(
 
 # Licensing
 
-This package is to free to use for open source under the terms of the [License Zero Reciprocal Public License](./LICENSE).
+This package is to free to use in open source under the terms of the [License Zero Reciprocal Public License](./LICENSE).
 
-Licenses for closed and proprietary use are available [via licensezero.com][project].
+Licenses for use in closed and proprietary software are available [via licensezero.com][project].
 
 [![L0](https://licensezero.com/projects/070801d5-59f1-46ed-bb38-f5aaaa459fb8/badge.svg)][project]
 

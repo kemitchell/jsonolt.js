@@ -10,5 +10,21 @@
   },
   "scripts": {
     "test": "node test.js"
-  }
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "licensezero": [
+    {
+      "license": {
+        "jurisdiction": "US-CA",
+        "name": "Kyle E. Mitchell",
+        "projectID": "070801d5-59f1-46ed-bb38-f5aaaa459fb8",
+        "publicKey": "1589d5a1b9b6b6ca26515b65fe9f725410c9f7fa41bcd9954a84d76f47cc6482",
+        "terms": "reciprocal",
+        "version": "2.0.1",
+        "homepage": "https://www.npmjs.com/package/jsonolt"
+      },
+      "licensorSignature": "e9a6cd9a3f2b2571c60def91dd444e965fd3f1f6520555062c8c08cd539776d39fc99568fbe54be5610e990f9b48f438f95ad2d20a613c876fa911368c846b0d",
+      "agentSignature": "85a7a9b6283e2ecc5138cf74976c11828ff4987087d0ce85165fb4a48b75efcc9976e57f14fb11b4af1057193a5d041763aa784bbdf31b20364cda21c655b80f"
+    }
+  ]
 }

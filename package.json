@@ -6,10 +6,13 @@
   "repository": "kemitchell/jsonolt.js",
   "homepage": "https://www.npmjs.com/package/jsonolt",
   "devDependencies": {
+    "defence-cli": "^2.0.1",
+    "replace-require-self": "^1.1.1",
     "tape": "^4.9.0"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "posttest": "defence -i javascript README.md | replace-require-self | node"
   },
   "license": "SEE LICENSE IN LICENSE",
   "licensezero": [

@@ -18,10 +18,11 @@ exports.encode = function recurse (argument, key) {
       return recurse(argument[key], key)
     })
   }
-  return {
-    label: {type: type, key: key, value: value},
-    children: children
-  }
+  var returned = {label: {type: type}}
+  if (key) returned.label.key = key
+  if (value !== undefined) returned.label.value = value
+  if (children) returned.children = children
+  return returned
 }
 
 exports.decode = function recurse (argument) {

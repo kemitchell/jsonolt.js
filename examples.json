@@ -45,5 +45,13 @@
         ]
       }
     ]
+  },
+  {
+    "comment": "object within object",
+    "value": {
+      "x": {
+        "y": "z"
+      }
+    }
   }
 ]

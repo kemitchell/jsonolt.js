@@ -30,6 +30,7 @@ exports.decode = function recurse (argument) {
   var key = label.key
   var value = label.value
   var children = argument.children
+  var recursed
   switch (type) {
   case 'null':
   case 'number':
@@ -37,14 +38,15 @@ exports.decode = function recurse (argument) {
   case 'boolean':
     return key ? {key: key, value: value} : value
   case 'array':
-    var recursed = children.map(recurse)
+    recursed = children.map(recurse)
     return key ? {key: key, value: recursed} : recursed
   case 'object':
-    return children.reduce(function (returned, child) {
+    recursed = children.reduce(function (returned, child) {
       var decoded = recurse(child)
       returned[decoded.key] = decoded.value
       return returned
     }, {})
+    return key ? {key: key, value: recursed} : recursed
   default:
     throw new Error('invalid type')
   }

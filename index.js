@@ -1,6 +1,6 @@
-exports.encode = function (argument) { return encode(argument) }
+exports.encode = function (argument) { return encode(argument, []) }
 
-function encode (argument, key) {
+function encode (argument, path, key) {
   var type = typeof argument
   var children, value
   if (argument === null) {
@@ -14,13 +14,18 @@ function encode (argument, key) {
     value = argument
   } else if (Array.isArray(argument)) {
     type = 'array'
-    children = argument.map(function (element) { return encode(element) })
+    children = argument.map(function (element, index) {
+      return encode(element, path.concat(index))
+    })
   } else /* if (Object.isObject(argument)) */ {
     children = Object.keys(argument).map(function (key) {
-      return encode(argument[key], key)
+      return encode(argument[key], path.concat(key), key)
     })
   }
-  var returned = {label: {type: type}}
+  var returned = {
+    label: {type: type},
+    path: path
+  }
   if (key) returned.label.key = key
   if (value !== undefined) returned.label.value = value
   if (children) returned.children = children

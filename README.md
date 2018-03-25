@@ -13,14 +13,25 @@ var example = {
 assert.deepStrictEqual(
   jsonolt.encode(example),
   {
+    path: [],
     label: {type: 'object'},
     children: [
-      {label: {key: 'a', type: 'string', value: 'x'}},
-      {label: {key: 'b', type: 'null', value: null}},
       {
+        path: ['a'],
+        label: {key: 'a', type: 'string', value: 'x'}
+      },
+      {
+        path: ['b'],
+        label: {key: 'b', type: 'null', value: null}
+      },
+      {
+        path:['c'],
         label: {key: 'c', type: 'array'},
         children: [
-          {label: {type: 'number', 'value': 42}}
+          {
+            path: ['c', 0],
+            label: {type: 'number', 'value': 42}
+          }
         ]
       }
     ]

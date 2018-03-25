@@ -1,14 +1,14 @@
 [
   {
     "comment": "array of numbers",
-    "value": [
+    "json": [
       1,
       2
     ]
   },
   {
     "comment": "array of mixed values",
-    "value": [
+    "json": [
       1,
       2,
       true,
@@ -20,14 +20,14 @@
   },
   {
     "comment": "object with string properties",
-    "value": {
+    "json": {
       "x": "a",
       "y": "b"
     }
   },
   {
     "comment": "object within array within object",
-    "value": {
+    "json": {
       "x": "a",
       "y": [
         {
@@ -38,17 +38,58 @@
   },
   {
     "comment": "array within object within array",
-    "value": [
+    "json": [
       {
         "x": [
           "a"
         ]
       }
-    ]
+    ],
+    "olt": {
+      "path": [],
+      "label": {
+        "type": "array"
+      },
+      "children": [
+        {
+          "path": [
+            0
+          ],
+          "label": {
+            "type": "object"
+          },
+          "children": [
+            {
+              "path": [
+                0,
+                "x"
+              ],
+              "label": {
+                "key": "x",
+                "type": "array"
+              },
+              "children": [
+                {
+                  "path": [
+                    0,
+                    "x",
+                    0
+                  ],
+                  "label": {
+                    "type": "string",
+                    "value": "a"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "comment": "object within object",
-    "value": {
+    "json": {
       "x": {
         "y": "z"
       }

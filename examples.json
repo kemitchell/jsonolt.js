@@ -26,17 +26,24 @@
     }
   },
   {
-    "comment": "nested objects and arrays",
+    "comment": "object within array within object",
     "value": {
       "x": "a",
       "y": [
-        "b",
-        "c",
-        null,
-        1,
-        false,
-        {"d": "z"}
+        {
+          "d": "z"
+        }
       ]
     }
+  },
+  {
+    "comment": "array within object within array",
+    "value": [
+      {
+        "x": [
+          "a"
+        ]
+      }
+    ]
   }
 ]

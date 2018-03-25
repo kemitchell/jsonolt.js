@@ -4,6 +4,7 @@
   "description": "encode JSON data as ordered, labeled trees",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "repository": "kemitchell/jsonolt.js",
+  "homepage": "https://www.npmjs.com/package/jsonolt",
   "devDependencies": {
     "tape": "^4.9.0"
   },

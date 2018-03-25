@@ -93,6 +93,36 @@
       "x": {
         "y": "z"
       }
+    },
+    "olt": {
+      "path": [],
+      "label": {
+        "type": "object"
+      },
+      "children": [
+        {
+          "path": [
+            "x"
+          ],
+          "label": {
+            "key": "x",
+            "type": "object"
+          },
+          "children": [
+            {
+              "path": [
+                "x",
+                "y"
+              ],
+              "label": {
+                "key": "y",
+                "type": "string",
+                "value": "z"
+              }
+            }
+          ]
+        }
+      ]
     }
   }
 ]

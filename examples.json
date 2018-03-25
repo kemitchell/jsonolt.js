@@ -24,5 +24,19 @@
       "x": "a",
       "y": "b"
     }
+  },
+  {
+    "comment": "nested objects and arrays",
+    "value": {
+      "x": "a",
+      "y": [
+        "b",
+        "c",
+        null,
+        1,
+        false,
+        {"d": "z"}
+      ]
+    }
   }
 ]

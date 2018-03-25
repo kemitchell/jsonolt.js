@@ -37,7 +37,8 @@ exports.decode = function recurse (argument) {
   case 'boolean':
     return key ? {key: key, value: value} : value
   case 'array':
-    return children.map(recurse)
+    var recursed = children.map(recurse)
+    return key ? {key: key, value: recursed} : recursed
   case 'object':
     return children.reduce(function (returned, child) {
       var decoded = recurse(child)

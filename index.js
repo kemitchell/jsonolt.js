@@ -1,4 +1,6 @@
-exports.encode = function recurse (argument, key) {
+exports.encode = function (argument) { return encode(argument) }
+
+function encode (argument, key) {
   var type = typeof argument
   var children, value
   if (argument === null) {
@@ -12,10 +14,10 @@ exports.encode = function recurse (argument, key) {
     value = argument
   } else if (Array.isArray(argument)) {
     type = 'array'
-    children = argument.map(function (element) { return recurse(element) })
+    children = argument.map(function (element) { return encode(element) })
   } else /* if (Object.isObject(argument)) */ {
     children = Object.keys(argument).map(function (key) {
-      return recurse(argument[key], key)
+      return encode(argument[key], key)
     })
   }
   var returned = {label: {type: type}}

@@ -1,4 +1,4 @@
-var examples = require('./examples')
+var examples = require('./tests')
 var tape = require('tape')
 var jsonolt = require('./')
 

@@ -124,5 +124,51 @@
         }
       ]
     }
+  },
+  {
+    "comment": "object with keys out of order",
+    "json": {
+      "z": 3,
+      "y": 2,
+      "x": 1
+    },
+    "olt": {
+      "path": [],
+      "label": {
+        "type": "object"
+      },
+      "children": [
+        {
+          "path": [
+            "x"
+          ],
+          "label": {
+            "key": "x",
+            "type": "number",
+            "value": 1
+          }
+        },
+        {
+          "path": [
+            "y"
+          ],
+          "label": {
+            "key": "y",
+            "type": "number",
+            "value": 2
+          }
+        },
+        {
+          "path": [
+            "z"
+          ],
+          "label": {
+            "key": "z",
+            "type": "number",
+            "value": 3
+          }
+        }
+      ]
+    }
   }
 ]

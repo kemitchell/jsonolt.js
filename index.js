@@ -18,9 +18,11 @@ function encode (argument, path, key) {
       return encode(element, path.concat(index))
     })
   } else /* if (Object.isObject(argument)) */ {
-    children = Object.keys(argument).map(function (key) {
-      return encode(argument[key], path.concat(key), key)
-    })
+    children = Object.keys(argument)
+      .sort()
+      .map(function (key) {
+        return encode(argument[key], path.concat(key), key)
+      })
   }
   var returned = {
     label: {type: type},

@@ -25,7 +25,7 @@ assert.deepStrictEqual(
         label: {key: 'b', type: 'null', value: null}
       },
       {
-        path:['c'],
+        path: ['c'],
         label: {key: 'c', type: 'array'},
         children: [
           {

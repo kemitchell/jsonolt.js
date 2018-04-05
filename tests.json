@@ -61,24 +61,34 @@
           "children": [
             {
               "path": [
-                0,
-                "x"
+                0
               ],
               "label": {
-                "key": "x",
-                "type": "array"
+                "type": "key",
+                "value": "x"
               },
               "children": [
                 {
                   "path": [
                     0,
-                    "x",
-                    0
+                    "x"
                   ],
                   "label": {
-                    "type": "string",
-                    "value": "a"
-                  }
+                    "type": "array"
+                  },
+                  "children": [
+                    {
+                      "path": [
+                        0,
+                        "x",
+                        0
+                      ],
+                      "label": {
+                        "type": "string",
+                        "value": "a"
+                      }
+                    }
+                  ]
                 }
               ]
             }
@@ -101,24 +111,42 @@
       },
       "children": [
         {
-          "path": [
-            "x"
-          ],
+          "path": [],
           "label": {
-            "key": "x",
-            "type": "object"
+            "type": "key",
+            "value": "x"
           },
           "children": [
             {
               "path": [
-                "x",
-                "y"
+                "x"
               ],
               "label": {
-                "key": "y",
-                "type": "string",
-                "value": "z"
-              }
+                "type": "object"
+              },
+              "children": [
+                {
+                  "path": [
+                    "x"
+                  ],
+                  "label": {
+                    "type": "key",
+                    "value": "y"
+                  },
+                  "children": [
+                    {
+                      "path": [
+                        "x",
+                        "y"
+                      ],
+                      "label": {
+                        "type": "string",
+                        "value": "z"
+                      }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -139,34 +167,58 @@
       },
       "children": [
         {
-          "path": [
-            "x"
-          ],
+          "path": [],
           "label": {
-            "key": "x",
-            "type": "number",
-            "value": 1
-          }
+            "type": "key",
+            "value": "x"
+          },
+          "children": [
+            {
+              "path": [
+                "x"
+              ],
+              "label": {
+                "type": "number",
+                "value": 1
+              }
+            }
+          ]
         },
         {
-          "path": [
-            "y"
-          ],
+          "path": [],
           "label": {
-            "key": "y",
-            "type": "number",
-            "value": 2
-          }
+            "type": "key",
+            "value": "y"
+          },
+          "children": [
+            {
+              "path": [
+                "y"
+              ],
+              "label": {
+                "type": "number",
+                "value": 2
+              }
+            }
+          ]
         },
         {
-          "path": [
-            "z"
-          ],
+          "path": [],
           "label": {
-            "key": "z",
-            "type": "number",
-            "value": 3
-          }
+            "type": "key",
+            "value": "z"
+          },
+          "children": [
+            {
+              "path": [
+                "z"
+              ],
+              "label": {
+                "type": "number",
+                "value": 3
+              }
+            }
+          ]
         }
       ]
     }

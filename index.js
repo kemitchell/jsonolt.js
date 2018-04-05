@@ -1,6 +1,6 @@
 exports.encode = function (argument) { return encode(argument, []) }
 
-function encode (argument, path, key) {
+function encode (argument, path) {
   var type = typeof argument
   var children, value
   if (argument === null) {
@@ -21,14 +21,22 @@ function encode (argument, path, key) {
     children = Object.keys(argument)
       .sort()
       .map(function (key) {
-        return encode(argument[key], path.concat(key), key)
+        return {
+          label: {
+            type: 'key',
+            value: key
+          },
+          path: path,
+          children: [
+            encode(argument[key], path.concat(key))
+          ]
+        }
       })
   }
   var returned = {
     label: {type: type},
     path: path
   }
-  if (key) returned.label.key = key
   if (value !== undefined) returned.label.value = value
   if (children) returned.children = children
   return returned
@@ -37,26 +45,23 @@ function encode (argument, path, key) {
 exports.decode = function recurse (argument) {
   var label = argument.label
   var type = label.type
-  var key = label.key
   var value = label.value
   var children = argument.children
-  var recursed
   switch (type) {
     case 'null':
     case 'number':
     case 'string':
     case 'boolean':
-      return key ? {key: key, value: value} : value
+      return value
     case 'array':
-      recursed = children.map(recurse)
-      return key ? {key: key, value: recursed} : recursed
+      return children.map(recurse)
     case 'object':
-      recursed = children.reduce(function (returned, child) {
-        var decoded = recurse(child)
-        returned[decoded.key] = decoded.value
+      return children.reduce(function (returned, keyChild) {
+        var key = keyChild.label.value
+        var decoded = recurse(keyChild.children[0])
+        returned[key] = decoded
         return returned
       }, {})
-      return key ? {key: key, value: recursed} : recursed
     default:
       throw new Error('invalid type')
   }

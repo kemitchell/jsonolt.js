@@ -1,0 +1,18 @@
+{
+  "version": "",
+  "licensezero": [
+    {
+      "agentSignature": "1bbe56d18f92b04bc1df88d86fcfe00b7be035969f672da66f57c76772cf86ed001f8a521bf81cb5fdecc5c606300c06b7432611e4f78f38807eafe94fda310e",
+      "license": {
+        "homepage": "https://www.npmjs.com/package/jsonolt",
+        "jurisdiction": "US-CA",
+        "name": "Kyle E. Mitchell",
+        "projectID": "070801d5-59f1-46ed-bb38-f5aaaa459fb8",
+        "publicKey": "1589d5a1b9b6b6ca26515b65fe9f725410c9f7fa41bcd9954a84d76f47cc6482",
+        "terms": "parity",
+        "version": "2.1.0"
+      },
+      "licensorSignature": "c8d11e6848799fba15e8c918c4121096b38821a42ff3250cd34388ed204c0908fe215a0a7613f5cf055627864ede20216410db2515d04c9b721add7d7d4e5c0b"
+    }
+  ]
+}

@@ -17,20 +17,38 @@ assert.deepStrictEqual(
     label: {type: 'object'},
     children: [
       {
-        path: ['a'],
-        label: {key: 'a', type: 'string', value: 'x'}
-      },
-      {
-        path: ['b'],
-        label: {key: 'b', type: 'null', value: null}
-      },
-      {
-        path: ['c'],
-        label: {key: 'c', type: 'array'},
+        path: [],
+        label: {type: 'key', value: 'a'},
         children: [
           {
-            path: ['c', 0],
-            label: {type: 'number', 'value': 42}
+            path: ['a'],
+            label: {type: 'string', value: 'x'} 
+          }
+        ]
+      },
+      {
+        path: [],
+        label: {type: 'key', value: 'b'},
+        children: [
+          {
+            path: ['b'],
+            label: {type: 'null', value: null}
+          },
+        ]
+      },
+      {
+        path: [],
+        label: {type: 'key', value: 'c'},
+        children: [
+          {
+            path: ['c'],
+            label: {type: 'array'},
+            children: [
+              {
+                path: ['c', 0],
+                label: {type: 'number', value: 42}
+              }
+            ]
           }
         ]
       }

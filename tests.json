@@ -52,11 +52,10 @@
       },
       "children": [
         {
-          "path": [
-            0
-          ],
+          "path": [],
           "label": {
-            "type": "object"
+            "type": "index",
+            "value": 0
           },
           "children": [
             {
@@ -64,29 +63,51 @@
                 0
               ],
               "label": {
-                "type": "key",
-                "value": "x"
+                "type": "object"
               },
               "children": [
                 {
                   "path": [
-                    0,
-                    "x"
+                    0
                   ],
                   "label": {
-                    "type": "array"
+                    "type": "key",
+                    "value": "x"
                   },
                   "children": [
                     {
                       "path": [
                         0,
-                        "x",
-                        0
+                        "x"
                       ],
                       "label": {
-                        "type": "string",
-                        "value": "a"
-                      }
+                        "type": "array"
+                      },
+                      "children": [
+                        {
+                          "path": [
+                            0,
+                            "x"
+                          ],
+                          "label": {
+                            "type": "index",
+                            "value": 0
+                          },
+                          "children": [
+                            {
+                              "path": [
+                                0,
+                                "x",
+                                0
+                              ],
+                              "label": {
+                                "type": "string",
+                                "value": "a"
+                              }
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }

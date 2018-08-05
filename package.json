@@ -1,6 +1,6 @@
 {
   "name": "jsonolt",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "encode JSON data as ordered, labeled trees",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "repository": "kemitchell/jsonolt.js",

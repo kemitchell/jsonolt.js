@@ -22,7 +22,7 @@ assert.deepStrictEqual(
         children: [
           {
             path: ['a'],
-            label: {type: 'string', value: 'x'} 
+            label: {type: 'string', value: 'x'}
           }
         ]
       },
@@ -33,7 +33,7 @@ assert.deepStrictEqual(
           {
             path: ['b'],
             label: {type: 'null', value: null}
-          },
+          }
         ]
       },
       {

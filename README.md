@@ -1,3 +1,7 @@
+encode JSON data as ordered, labeled trees
+
+JSON data is tree-like, but a lot of computer science literature on trees works on a slightly different formal structure: so-called "ordered, labeled trees" (OLTs).  This package uniformly converts JSON-compatible data structures to and from slightly larger JSON-compatible structures that are easy to process as ordered, labeled trees.
+
 # Usage
 
 ```javascript

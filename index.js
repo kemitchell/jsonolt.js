@@ -73,6 +73,7 @@ exports.decode = function recurse (argument) {
         returned[key] = decoded
         return returned
       }, {})
+    /* istanbul ignore next */
     default:
       throw new Error('invalid type')
   }

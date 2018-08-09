@@ -52,10 +52,11 @@
       },
       "children": [
         {
-          "path": [],
+          "path": [
+            0
+          ],
           "label": {
-            "type": "index",
-            "value": 0
+            "type": "object"
           },
           "children": [
             {
@@ -63,51 +64,29 @@
                 0
               ],
               "label": {
-                "type": "object"
+                "type": "key",
+                "value": "x"
               },
               "children": [
                 {
                   "path": [
-                    0
+                    0,
+                    "x"
                   ],
                   "label": {
-                    "type": "key",
-                    "value": "x"
+                    "type": "array"
                   },
                   "children": [
                     {
                       "path": [
                         0,
-                        "x"
+                        "x",
+                        0
                       ],
                       "label": {
-                        "type": "array"
-                      },
-                      "children": [
-                        {
-                          "path": [
-                            0,
-                            "x"
-                          ],
-                          "label": {
-                            "type": "index",
-                            "value": 0
-                          },
-                          "children": [
-                            {
-                              "path": [
-                                0,
-                                "x",
-                                0
-                              ],
-                              "label": {
-                                "type": "string",
-                                "value": "a"
-                              }
-                            }
-                          ]
-                        }
-                      ]
+                        "type": "string",
+                        "value": "a"
+                      }
                     }
                   ]
                 }

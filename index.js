@@ -15,16 +15,7 @@ function encode (argument, path) {
   } else if (Array.isArray(argument)) {
     type = 'array'
     children = argument.map(function (element, index) {
-      return {
-        label: {
-          type: 'index',
-          value: index
-        },
-        path: path,
-        children: [
-          encode(argument[index], path.concat(index))
-        ]
-      }
+      return encode(element, path.concat(index))
     })
   } else /* if (Object.isObject(argument)) */ {
     children = Object.keys(argument)
@@ -63,9 +54,7 @@ exports.decode = function recurse (argument) {
     case 'boolean':
       return value
     case 'array':
-      return children.map(function (indexChild) {
-        return recurse(indexChild.children[0])
-      })
+      return children.map(recurse)
     case 'object':
       return children.reduce(function (returned, keyChild) {
         var key = keyChild.label.value

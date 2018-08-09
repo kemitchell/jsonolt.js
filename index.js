@@ -26,7 +26,7 @@ function encode (argument, path) {
             type: 'key',
             value: key
           },
-          path: path,
+          path: path.concat(key),
           children: [
             encode(argument[key], path.concat(key))
           ]

@@ -61,7 +61,8 @@
           "children": [
             {
               "path": [
-                0
+                0,
+                "x"
               ],
               "label": {
                 "type": "key",
@@ -111,7 +112,9 @@
       },
       "children": [
         {
-          "path": [],
+          "path": [
+            "x"
+          ],
           "label": {
             "type": "key",
             "value": "x"
@@ -127,7 +130,8 @@
               "children": [
                 {
                   "path": [
-                    "x"
+                    "x",
+                    "y"
                   ],
                   "label": {
                     "type": "key",
@@ -167,7 +171,9 @@
       },
       "children": [
         {
-          "path": [],
+          "path": [
+            "x"
+          ],
           "label": {
             "type": "key",
             "value": "x"
@@ -185,7 +191,9 @@
           ]
         },
         {
-          "path": [],
+          "path": [
+            "y"
+          ],
           "label": {
             "type": "key",
             "value": "y"
@@ -203,7 +211,9 @@
           ]
         },
         {
-          "path": [],
+          "path": [
+            "z"
+          ],
           "label": {
             "type": "key",
             "value": "z"

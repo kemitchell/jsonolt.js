@@ -21,7 +21,7 @@ assert.deepStrictEqual(
     label: {type: 'object'},
     children: [
       {
-        path: [],
+        path: ['a'],
         label: {type: 'key', value: 'a'},
         children: [
           {
@@ -31,7 +31,7 @@ assert.deepStrictEqual(
         ]
       },
       {
-        path: [],
+        path: ['b'],
         label: {type: 'key', value: 'b'},
         children: [
           {
@@ -41,7 +41,7 @@ assert.deepStrictEqual(
         ]
       },
       {
-        path: [],
+        path: ['c'],
         label: {type: 'key', value: 'c'},
         children: [
           {

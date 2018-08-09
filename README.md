@@ -49,14 +49,8 @@ assert.deepStrictEqual(
             label: {type: 'array'},
             children: [
               {
-                path: ['c'],
-                label: {type: 'index', value: 0},
-                children: [
-                  {
-                    path: ['c', 0],
-                    label: {type: 'number', value: 42}
-                  }
-                ]
+                path: ['c', 0],
+                label: {type: 'number', value: 42}
               }
             ]
           }
